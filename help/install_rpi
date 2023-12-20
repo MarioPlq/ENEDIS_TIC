@@ -18,6 +18,7 @@ install grafana
 désactiver les logs pour ne pas détruire la carte SD
 
 ouvrir port livebox pour web et ssh et grafana
+mettre un nom de domaine pour livebox
 
 faire code cron_xxx.sh et xxx.py pour intérroger et mettre en bases les données
 
