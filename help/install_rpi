@@ -1,0 +1,24 @@
+parametrer credentials wifi
+fixer ip local
+
+changer le ssh 22 en autre port et ouvrir port dans livebox pour futur exposition 
+
+install server apache2 (avec mariadb/mysql et phpmyadmin) 
+	> mettre sur un port autre que 80
+	> paramétrer apache2.conf et php.ini
+	> mettre credentials sur interface web et sql
+	> créer bdd sql
+install mosquitto 
+	> mettre credentials
+install flask python
+install grafana
+	> mettre credentials
+	> paramétrer datasource
+
+désactiver les logs pour ne pas détruire la carte SD
+
+ouvrir port livebox pour web et ssh et grafana
+
+faire code cron_xxx.sh et xxx.py pour intérroger et mettre en bases les données
+
+paramétrer crontab
