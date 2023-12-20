@@ -22,8 +22,8 @@ def api_linky_inst():
 
     for topic in listen_topics:
         response = fetch_mqtt_msg(mqtt_auth, mqtt_server, publish_topic, topic)
-	data.update({topic: response})
-	time.sleep(1)
+        data.update({topic: response})
+        time.sleep(1)
 
     js = json.dumps(data)
 
@@ -40,7 +40,7 @@ def api_linky_moy():
     for topic in listen_topics:
         response = fetch_mqtt_msg(mqtt_auth, mqtt_server, publish_topic, topic)
         data.update({topic: response})
-	time.sleep(1)
+        time.sleep(1)
 
     js = json.dumps(data)
 
