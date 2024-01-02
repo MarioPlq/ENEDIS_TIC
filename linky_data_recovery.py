@@ -11,14 +11,13 @@ now = datetime.datetime.now()
 #send data
 conn = mysql.connector.connect(host=mysql_host, user=mysql_user, password=mysql_psw, database=mysql_database)
 cursor = conn.cursor()
-if int(response['esp32/Papp_i']) == 0:
-	response['esp32/Papp_i'] = None
-if int(response['esp32/Papp_m']) == 0:
-	response['esp32/Papp_m'] = None
-if int(response['esp32/Conso_i']) == 0:
-	response['esp32/Conso_i'] = None
-values = (None, datetime.datetime(now.year, now.month, now.day, now.hour, now.minute), 
-				response['esp32/Papp_i'], response['esp32/Papp_m'], 
+
+for k in response.keys():
+	if int(response[k]) == 0:
+		response[k] = None
+
+values = (None, datetime.datetime(now.year, now.month, now.day, now.hour, now.minute),
+				response['esp32/Papp_i'], response['esp32/Papp_m'],
 				response['esp32/Conso_i'])
 cursor.execute("""INSERT INTO data_linky (id, datetime, Papp_i, Papp_m, Conso_i) VALUES (%s, %s, %s, %s, %s)""", values)
 conn.commit()
