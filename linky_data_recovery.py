@@ -10,7 +10,13 @@ now = datetime.datetime.now()
 
 #send data
 conn = mysql.connector.connect(host=mysql_host, user=mysql_user, password=mysql_psw, database=mysql_database)
-cursor = conn.cursor()   
+cursor = conn.cursor()
+if int(response['esp32/Papp_i']) == 0:
+	response['esp32/Papp_i'] = None
+if int(response['esp32/Papp_m']) == 0:
+	response['esp32/Papp_m'] = None
+if int(response['esp32/Conso_i']) == 0:
+	response['esp32/Conso_i'] = None
 values = (None, datetime.datetime(now.year, now.month, now.day, now.hour, now.minute), 
 				response['esp32/Papp_i'], response['esp32/Papp_m'], 
 				response['esp32/Conso_i'])
