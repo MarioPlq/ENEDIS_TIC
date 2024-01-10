@@ -1,16 +1,5 @@
 /*
-  Lecture Linky v1.1 Mode Historique
-  ***********************************
-
-  Lecture des données du Linky disponibles sur l'interface TIC (Terminal Information Client)
-
-  Les détails sont disponibles sur :
-  https://f1atb.fr  Section Domotique
-
-  F1ATB Juin 2023
-
-  GNU General Public License v3.0
-
+Lecture des données du Linky sur l'interface TIC
 */
 
 //Librairies
